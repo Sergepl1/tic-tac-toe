@@ -1,0 +1,63 @@
+
+div {
+    box-sizing: border-box;
+}
+
+.mainGame {
+    display: none;
+}
+
+.error-message {
+    color: red;
+}
+
+.field {
+    margin: 10px;
+    margin-left: 0;
+    display: inline-block;
+}
+
+.cell.x:after {
+    content: '✕';
+    color: green;
+    font-size: 70px;
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    line-height: 71px;
+    text-align: center;
+}
+
+.cell.o:after {
+    font-weight: bold;
+    color: red;
+    content: '◯';
+    font-size: 71px;
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    line-height: 71px;
+    text-align: center;
+}
+
+.row {
+    height: 75px;
+}
+
+.cell {
+    display: inline-block;
+    border: solid #696969 2px;
+    width: 75px;
+    height: 75px;
+}
+
+.winner-message {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@-moz-document url-prefix() {
+    .cell.o:after {
+        font-size: 55px;
+    }
+}
